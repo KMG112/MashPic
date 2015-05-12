@@ -1,13 +1,17 @@
 class Request < ActiveRecord::Base
-  include HTTParty
 
-  # def self.search(keyword)
-  # response = HTTParty.get("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-  #   :headers =>{
-  #       "tags" => keyword,
-  #       "format" => "json"
-  #   })
-  #
-  #
-  # end
+  def self.search(input, labe)
+
+      list   = flickr.photos.search(:tags => input)
+
+      id  = list[0].id
+
+      sizes = flickr.photos.getSizes :photo_id => id
+
+      found_size = sizes.find {|s| s.label == labe }
+
+      return found_size.source
+
+  end
+
 end

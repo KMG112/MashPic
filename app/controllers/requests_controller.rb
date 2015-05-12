@@ -16,11 +16,14 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+    @keyword1 = Request.search(@request.keyword1 + ", close up", 'Small')
+    @keyword2 = Request.search(@request.keyword2, 'Medium')
+    @keyword3 = Request.search(@request.keyword3+ ", background", 'Large')
   end
 
   private
 
   def request_params
-    params.require(:request).permit(:keyword1, :keyword2, :keyword3)
+    params.require(:request).permit(:id, :keyword1, :keyword2, :keyword3)
   end
 end
