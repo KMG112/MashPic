@@ -18,16 +18,26 @@
   height: 350px;
   background-size: contain;
   background-repeat: no-repeat;
+  display: inline-block;
+  z-index: 1;
+  position: absolute;
 }
 .keyword2{
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   background-size: contain;
   background-repeat: no-repeat;
+  display: inline-block;
+  z-index: 2;
+  position: absolute;
+  margin-top: 200px;
 }
 .keyword3{
   width: 1000px;
   height: 1000px;
   background-size: contain;
   background-repeat: no-repeat;
+  display: inline-block;
+  z-index: 0
+  position: absolute;
 }

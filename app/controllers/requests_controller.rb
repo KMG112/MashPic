@@ -16,9 +16,9 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
-    @keyword1 = Request.search(@request.keyword1 + ", close up", 'Small')
+    @keyword1 = Request.search(@request.keyword1, 'Small')
     @keyword2 = Request.search(@request.keyword2, 'Medium')
-    @keyword3 = Request.search(@request.keyword3+ ", background", 'Large')
+    @keyword3 = Request.search(@request.keyword3, 'Large')
   end
 
   private
