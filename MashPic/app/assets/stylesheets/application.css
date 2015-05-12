@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+.keyword1{
+  width: 350px;
+  height: 350px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.keyword2{
+  width: 600px;
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.keyword3{
+  width: 1000px;
+  height: 1000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
