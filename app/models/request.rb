@@ -1,6 +1,16 @@
 class Request < ActiveRecord::Base
 
-  def self.search(input, labe)
+
+  def self.search_clipart(input)
+
+    user_input = input.split(" ").join("+")
+    response = HTTParty.get("https://openclipart.org/search/json/?query=icon+"+user_input)
+
+  return response["payload"][0]["svg"]["url"]
+
+  end
+
+  def self.search_flickr(input, labe)
     FlickRaw.api_key= "af6cb124a512efe6089bfbaaf29669ac"
     FlickRaw.shared_secret= "ae170a93938eaded"
 

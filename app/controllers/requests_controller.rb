@@ -16,9 +16,9 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
-    @keyword1 = Request.search(@request.keyword1, 'Small')
-    @keyword2 = Request.search(@request.keyword2, 'Medium')
-    @keyword3 = Request.search(@request.keyword3, 'Large')
+    @keyword1 = Request.search_flickr(@request.keyword1+", closeup", 'Small')
+    @keyword2 = Request.search_clipart(@request.keyword2)
+    @keyword3 = Request.search_flickr(@request.keyword3, 'Large')
   end
 
   private
