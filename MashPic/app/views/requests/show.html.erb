@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Keyword:</strong>
-  <%= @request.keyword %>
+  <strong>Keyword:</strong><br>
+  <div class="keyword1"><%= @keyword1 %></div><br>
+  <div class="keyword2"><%= @keyword2 %></div><br>
+  <div class="keyword3"><%= @keyword3 %></div><br>
 </p>
 
-<%= link_to 'Edit', edit_request_path(@request) %> |
-<%= link_to 'Back', requests_path %>
+
+<%= link_to 'Back', new_request_path %>
