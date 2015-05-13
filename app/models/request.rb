@@ -29,8 +29,9 @@ class Request < ActiveRecord::Base
   end
 
   def self.imageMagic(k1, k2, k3)
-    mash = ImageList.new(k1, k2, k3)
-
+    m = Magick::ImageList.new(k1, k2, k3)
+    all = m.average
+    all.write(RAILS_ROOT + "/public/collage.png")
   end
 
 end
