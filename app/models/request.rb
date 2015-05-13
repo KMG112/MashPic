@@ -28,4 +28,9 @@ class Request < ActiveRecord::Base
 
   end
 
+  def self.imageMagic(k1, k2, k3)
+    mash = ImageList.new(k1, k2, k3)
+
+  end
+
 end
