@@ -7,6 +7,10 @@ gem 'pg'
 
 gem 'httparty'
 
+gem 'pry'
+
+gem 'fileutils', '~> 0.7'
+
 gem 'figaro'
 
 gem 'rmagick'
