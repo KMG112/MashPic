@@ -9,6 +9,8 @@ gem 'httparty'
 
 gem 'pry'
 
+gem 'aws-sdk'
+
 gem 'fileutils', '~> 0.7'
 
 gem 'figaro'

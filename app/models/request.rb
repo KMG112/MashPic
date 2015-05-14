@@ -12,8 +12,8 @@ class Request < ActiveRecord::Base
   end
 
   def self.search_flickr(input, labe)
-    FlickRaw.api_key= "af6cb124a512efe6089bfbaaf29669ac"
-    FlickRaw.shared_secret= "ae170a93938eaded"
+    FlickRaw.api_key= Figaro.env.flickr_key
+    FlickRaw.shared_secret= Figaro.env.flickr_secret
 
       list   = flickr.photos.search(:tags => input)
 
