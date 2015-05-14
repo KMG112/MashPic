@@ -7,6 +7,8 @@ gem 'pg'
 
 gem 'httparty'
 
+gem 'rails_12factor'
+
 gem 'pry'
 
 gem 'fog'
