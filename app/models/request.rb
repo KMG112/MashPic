@@ -33,32 +33,49 @@ class Request < ActiveRecord::Base
 
   def self.imageMagic(k1, k2, k3)
 
+    FileUtils.remove_file(Rails.root + "public/collage.png")
+    
+    Request.save_pic(k1, 'keyword1')
+    Request.save_pic(k2, 'keyword2')
+    Request.save_pic(k3, 'keyword3')
 
+    
+    m = Magick::ImageList.new('public/keyword1.png', 'public/keyword2.png', 'public/keyword3.png')
+    
+    m[0].format = "png" #converting flickr jpg to png like clipart
+    m[2].format = "png"
 
-    key1 = Request.save_pic(k1, 'keyword1')
-    key2 = Request.save_pic(k2, 'keyword2')
-    key3 = Request.save_pic(k3, 'keyword3')
-
-    m = Magick::ImageList.new(key1, key2, key3)
-
-    m[1].format = "jpg" #clipart is png file. converts
+    
+    m.each do |x|
       
+      x.resize!(400,400)
+      
+    end
+
+
+    
 
     all = m.average
+    
 
-    all.write(Rails.root + "public/collage.jpg")
+    all.write(Rails.root + "public/collage.png")
     # ultimately to AWS
   end
 
   def self.save_pic(input, name)
-    name = name+'.jpg'
+
+    name = name+'.png'
+
     root = Rails.root + 'public/'+name
-    # FileUtils.remove_file(Rails.root + "public/collage.jpg")
+
     FileUtils.remove_file(root)
+
     open(root, 'wb') do |file|
       file << open(input).read
     end
+
     return root
+   
   end
 
 end
