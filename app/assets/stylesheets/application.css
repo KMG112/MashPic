@@ -28,6 +28,17 @@
  	border-radius: 50px;
  	color: #1DF0F0;
  }
+ 
+ .picdisplay{
+ 	margin: 0 0 0 12%;
+ 	width: 800px;
+ 	border: 1px solid black;
+ 	padding: 50px;
+ 	background-color: black;
+ 	box-shadow: inset 10px 10px 100px white;
+ 	border-radius: 50px;
+ 	color: #1DF0F0;
+ }
 
  .notice{
  	display: inline-block;
@@ -64,6 +75,8 @@
 }
 
 .searchbutton input{
+	font-weight: bold;
+	border-radius: 10px;
 	background: #1DF0F0;
-	box-shadow: 1px 1px 5px black;
+	box-shadow: inset 1px 1px 5px black;
 }
