@@ -6,8 +6,21 @@ gem 'rails', '4.2.1'
 gem 'pg'
 
 gem 'httparty'
+
+gem 'rails_12factor'
+
+
+
+gem 'pry'
+
+gem 'aws-sdk-v1'
+
+gem 'fileutils', '~> 0.7'
+
 gem 'figaro'
+
 gem 'rmagick'
+
 gem 'flickraw'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
