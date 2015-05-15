@@ -9,8 +9,6 @@ gem 'httparty'
 
 gem 'rails_12factor'
 
-
-
 gem 'pry'
 
 gem 'aws-sdk-v1'
