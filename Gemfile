@@ -9,11 +9,11 @@ gem 'httparty'
 
 gem 'rails_12factor'
 
+
+
 gem 'pry'
 
-gem 'fog'
-
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 
 gem 'fileutils', '~> 0.7'
 
