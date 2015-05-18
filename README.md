@@ -1,6 +1,6 @@
 # MashPic
 
-https://salty-wildwood-5385.herokuapp.com/requests/new <br>
+https://salty-wildwood-5385.herokuapp.com <br>
 https://trello.com/b/dYrJ2wii/mashpic <br />
 Welcome <br />
 Mash pic takes input from a user in a 'madlibs' format, and creates a new picture based on user input. For example a template looks like this.<br />

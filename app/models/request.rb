@@ -52,26 +52,26 @@ class Request < ActiveRecord::Base
     
     m.each do |x|
       
-      x.resize!(400,400)
+      x.resize!(400,400) #resized images so that they can be averaged by imagemagick
       
     end
 
-    all = m.average
+    all = m.average #compiles photos
     
-    all.write(Rails.root + "public/collage.png")
+    all.write(Rails.root + "public/collage.png") #creates file localy
 
-    obj = S3_BUCKET.objects["collage.png"]
+    obj = S3_BUCKET.objects["collage.png"] #creates object in AWS bucket
 
     obj.write(
       file: 'public/collage.png',
       acl: :public_read
-    )
+    )#writes item to AWS bucket
 
   end
 
   def self.save_pic(input, name)
 
-    name = name+'.png'
+    name = name+'.png' 
 
     root = Rails.root + 'public/'+name
 
