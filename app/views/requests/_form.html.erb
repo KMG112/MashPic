@@ -1,5 +1,6 @@
 <%= form_for(@request) do |f| %>
   <% if @request.errors.any? %>
+  <!-- will there ever be errors on your form, if there are no validations on your model? -->
     <div id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
 
