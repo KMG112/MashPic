@@ -4,14 +4,14 @@ class Request < ActiveRecord::Base
 
 
 
-  def self.search_clipart(input)
+  # def self.search_clipart(input)
 
-    user_input = input.split(" ").join("+")
-    response = HTTParty.get("https://openclipart.org/search/json/?query=icon+"+user_input)
+  #   user_input = input.split(" ").join("+")
+  #   response = HTTParty.get("https://openclipart.org/search/json/?query=icon+"+user_input)
 
-  return response["payload"][0]["svg"]["png_thumb"]
+  # return response["payload"][0]["svg"]["png_thumb"]
 
-  end
+  # end
 
 
   def self.search_flickr(input, labe)
