@@ -10,17 +10,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<% array =["Top Hat", 'Helmet', "Birthday Hat"]%>
+  <div class="container" id="field">
    I want to see a  
     <%= f.text_field :keyword1%>
     wearing a 
-    <%= f.text_field :keyword2 %>
+    <%= f.select(:keyword2) do %>
+      <% array.each do |c| -%>
+      <%= content_tag(:option, c)%>
+      <%end%>
+      <%end%>
     while in 
     <%= f.text_field :keyword3 %>
 
   </div>
-  <div class="searchbutton">
-    <%= f.submit :MashApic%>
-  </div>
-<% end %>
+
+    <%= f.submit :MashApic, class: "commit btn btn-primary btn-lg center-block"%>
+
+  <% end %>
