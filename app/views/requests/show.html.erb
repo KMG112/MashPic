@@ -1,20 +1,23 @@
 
+ 
 <div class="picdisplay container">
 <p id="notice"><%= notice %></p>
 
 
   <h1>MashPIC</h1><br>
-
-
+  <div id="clipArt" class="keyword2" value=<%= @keyword2 %>><%= image_tag(@keyword2.split(" ").join("_") +".svg") %></div><br>
 
   <div class="keyword1" value=<%= @keyword1 %>></div><br>
-  <div class="keyword2" value=<%= @keyword2 %>></div><br>
   <div class="keyword3" value=<%= @keyword3 %>></div><br>
   <div class="image"></div> 
   <%= button_to "try again", request_path, :method => :get, class: " tryAgain btn center-block" %>
+
+
+  <%= link_to 'Back', new_request_path, class: "back btn btn-primary" %>
+
 </div>
 
 
 
 
-  <%= link_to 'Back', new_request_path, class: "back btn btn-primary" %>
+  

@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ /*
+ *= require jquery-ui
+ */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -31,7 +35,10 @@ body{
  .picdisplay{
 
  }
-
+#clipArt{
+	 height: 200px;
+ 	 width: 200px;
+}
  .back{
 
  	font-size: 30px;
