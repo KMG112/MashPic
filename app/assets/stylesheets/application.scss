@@ -13,48 +13,55 @@
  *= require_tree .
  *= require_self
  */
- body{
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
  	background-color: #1D8385;
  	font-family: 'Indie Flower', cursive;
  }
 
  .info{
- 	margin: 10% 0 0 12%;
- 	width: 800px;
- 	border: 1px solid black;
+ 	width: 1000px;
  	padding: 100px;
- 	background-color: black;
- 	box-shadow: inset 10px 10px 100px white;
- 	border-radius: 50px;
- 	color: #1DF0F0;
+ 	text-shadow:1px 1px 10px white;
  }
  
  .picdisplay{
- 	margin: 0 0 0 12%;
- 	width: 800px;
- 	border: 1px solid black;
- 	padding: 50px;
- 	background-color: black;
- 	box-shadow: inset 10px 10px 100px white;
- 	border-radius: 50px;
- 	color: #1DF0F0;
+
+ }
+
+ .back{
+
+ 	font-size: 30px;
+ 	line-height: 90px;
+ 	margin-left: 50px;
+ }
+
+  .tryAgain{
+ 	width: 200px;
+ 	height: 100px;
+ 	font-size: 30px;
+ 	line-height: 90px;
+ 	margin-left: 400px;
  }
 
  .notice{
  	display: inline-block;
  }
 
-.new_request{
-	width: 700px;
-
-	margin-left: 200px;
-}
 
  h1{
  	margin:50px 0 30px 150px;
  	display: inline-block;
- 	font-size: 50px;
+ 	font-size: 100px;
  	text-shadow: 1px 1px 10px;
+ 	color: white;
+ }
+
+ .commit{
+ 	margin-top: 20px;
  }
 
 .image{
