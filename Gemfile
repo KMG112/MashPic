@@ -16,7 +16,7 @@ gem 'aws-sdk-v1'
 gem 'fileutils', '~> 0.7'
 
 gem 'figaro'
-
+gem 'jquery-ui-rails'
 gem 'rmagick'
 gem 'bootstrap-sass'
 gem 'flickraw'

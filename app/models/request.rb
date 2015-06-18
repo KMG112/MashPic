@@ -19,6 +19,7 @@ class Request < ActiveRecord::Base
     FlickRaw.api_key= Figaro.env.flickr_key
     FlickRaw.shared_secret= Figaro.env.flickr_secret
 
+    # input = input.split(" ").join("+")
       list   = flickr.photos.search(:tags => input)
 
       numb = rand(0..20)
@@ -35,19 +36,19 @@ class Request < ActiveRecord::Base
 
 
 
-  def self.imageMagic(k1, k2, k3)
+  def self.imageMagic(k1, k3)
 
     FileUtils.remove_file(Rails.root + "public/collage.png")
     
     Request.save_pic(k1, 'keyword1')
-    Request.save_pic(k2, 'keyword2')
+
     Request.save_pic(k3, 'keyword3')
 
     
-    m = Magick::ImageList.new('public/keyword1.png', 'public/keyword2.png', 'public/keyword3.png')
+    m = Magick::ImageList.new('public/keyword1.png', 'public/keyword3.png')
     
     m[0].format = "png" #converting flickr jpg to png like clipart
-    m[2].format = "png"
+    m[1].format = "png"
 
     
     m.each do |x|
