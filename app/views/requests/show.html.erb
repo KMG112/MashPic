@@ -5,8 +5,9 @@
 
 
   <h1>MashPIC</h1><br>
-  <div id="clipArt" class="keyword2" value=<%= @keyword2 %>><%= image_tag(@keyword2.split(" ").join("_") +".svg") %></div><br>
-
+  <div id="clipArtHolder">
+  	<div id="clipArt" class="keyword2" value=<%= @keyword2 %>><%=image_tag(@keyword2.split(" ").join("_") +".svg") %></div>
+  </div>
   <div class="keyword1" value=<%= @keyword1 %>></div><br>
   <div class="keyword3" value=<%= @keyword3 %>></div><br>
   <div class="image"></div> 
